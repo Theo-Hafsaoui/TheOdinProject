@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* HEADER */
+.header{
+  display: flex;
+  color: aliceblue;
+  background-color: #1F2937;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.rightlinks{
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+ul {
+  list-style-type: none;
+}
+/* HEADER */
+/* TOPCONTENT */
+
+body {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0;
+}
+
+.TopContent{
+  display: flex;
+  padding: 4%;
+  color: aliceblue;
+  justify-content:center;
+  align-content: center;
+  background-color: #1F2937;
+}
+
+.LeftTopContent{
+  border: 10px solid blue;
+  padding-left: 9%;
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  color: aliceblue;
+  align-items: flex-start;
+  background-color: #1F2937;
+}
+
+#headerButton{
+  color:aliceblue;
+  background-color: #3882F6;
+  border-color: #3882F6;
+  border-radius: 8px;
+}
+
+.RightTopContent{
+  border: 10px solid red;
+  padding-right: 9%;
+  display: flex;
+  flex:1;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TOPCONTENT */
+/* FOOTER */
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  background-color: #1F2937;
+}
+
+img {max-width:100%;};
+img {max-height:100%;};
