@@ -1,0 +1,32 @@
+body{
+  background-color: #262626;
+}
+
+.title{
+  color:#FBF1C7;
+  display: flex;
+  justify-content:center;
+}
+
+
+.topPyramide,
+.BottomPyramide{
+  display: flex;
+  justify-content:center;
+}
+
+.GameChoice{
+  color: #fff;
+  background-color:#3C3836;
+  border-radius: 10%;
+  height:15%;
+  width:15%;
+}
+
+.GameChoice:hover{
+  background-color:#665C54;
+}
+
+.GameChoice:active{
+  background-color:#D79921;
+}

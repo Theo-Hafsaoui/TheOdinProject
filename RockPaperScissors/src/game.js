@@ -39,6 +39,7 @@ function round(player,computer) {
   }
 }
 
+
 function game() {
   continu= 1;
   const l=["rock","paper","scissor"];
@@ -57,4 +58,4 @@ function game() {
 }
 
 //MAIN
-game();
+//game();
