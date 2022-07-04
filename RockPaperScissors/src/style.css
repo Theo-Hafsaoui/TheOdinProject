@@ -2,7 +2,8 @@ body{
   background-color: #262626;
 }
 
-.title{
+.title,
+.score{
   color:#FBF1C7;
   display: flex;
   justify-content:center;
@@ -15,7 +16,9 @@ body{
   justify-content:center;
 }
 
-.GameChoice{
+.Fire,
+.Water,
+.Grass{
   color: #fff;
   background-color:#3C3836;
   border-radius: 10%;
@@ -23,10 +26,22 @@ body{
   width:15%;
 }
 
-.GameChoice:hover{
-  background-color:#665C54;
+
+.Fire:hover{
+  background-color:#FE8019;
 }
 
-.GameChoice:active{
+.Water:hover{
+  background-color:#83A5C3;
+}
+
+.Grass:hover{
+  background-color:#98971A;
+}
+
+
+.Grass:active,
+.Water:active,
+.Fire:active{
   background-color:#D79921;
 }

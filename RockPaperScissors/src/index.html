@@ -5,18 +5,23 @@
   <link rel="stylesheet" href="./style.css">
   <title>Rock Paper Scissor</title>
    <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
-  <script src="game.js"></script>
+  <script src="game.js" defer></script>
 </head>
+
   <div class="title">
-  <h1>RockPaperScissors</h1>
+  <h1 id="top">Your turn</h1>
+  </div>
+
+  <div class="score">
+  <h1 id="sc">score:0-0</h1>
   </div>
 <body>
   <div class="topPyramide">
-    <input class="GameChoice" type="image" src="../img/fire.svg"  />
+    <input class="Fire" type="image" src="../img/fire.svg"  />
   </div>
   <div class="BottomPyramide">
-    <input class="GameChoice" type="image" src="../img/water.svg" />
-    <input class="GameChoice" type="image" src="../img/grass.svg" />
+    <input class="Water" type="image" src="../img/water.svg" />
+    <input class="Grass" type="image" src="../img/grass.svg" />
   </div>
 </body>
 </html>
