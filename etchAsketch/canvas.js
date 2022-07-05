@@ -1,18 +1,21 @@
-var cnv = document.querySelector('.canvas');
+var cnv = document.querySelector('div.canvas');
 
-const content = document.createElement('div');
-content.classList.add('content');
-content.textContent = 'This is the glorious text-content!';
-
-function init_cnv(size) {
+function init_cnv(s) {
 /**
- *Create a canvas of 16x16 div
+ *Create a canvas of sxs div
  */
-  for (let _ = 0; _ < size; _++) {
-   const content = document.createElement('div');
-   cnv.appendChild(content);
-   console.log("test") ;
+  for (let _ = 0; _ < s; _++) {
+    var ligne = document.createElement('div');
+    ligne.classList.add('ligne')
+    for (let _ = 0; _ < s; _++) {
+       var block = document.createElement('div');
+       block.classList.add('block')
+       ligne.appendChild(block);
+    }
+    cnv.appendChild(ligne);
   }
 }
 
-cnv.appendChild(content);
+//Main
+init_cnv(16);
+

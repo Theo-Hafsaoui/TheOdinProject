@@ -8,3 +8,15 @@ body{
   display: flex;
   justify-content:center;
 }
+
+.ligne{
+  display: flex;
+  justify-content:center;
+}
+
+.block{
+  border-style: solid;
+  padding: 1%;
+  background-color: white;
+  border-color: red;
+}
