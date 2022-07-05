@@ -40,8 +40,14 @@ body{
 }
 
 
-.Grass:active,
-.Water:active,
+.Grass:active{
+  background-color:#38BF4B;
+}
+
+.Water:active{
+  background-color:#3692DC;
+}
+
 .Fire:active{
-  background-color:#D79921;
+  background-color:#FF9741;
 }

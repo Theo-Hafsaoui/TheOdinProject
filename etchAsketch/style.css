@@ -1,0 +1,10 @@
+body{
+  background-color: #262626;
+  color: white;
+}
+
+.title{
+  color:#FBF1C7;
+  display: flex;
+  justify-content:center;
+}
