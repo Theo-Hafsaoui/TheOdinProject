@@ -1,4 +1,5 @@
 var cnv = document.querySelector('div.canvas');
+var pen_color = "#800080"
 
 function init_cnv(s) {
 /**
@@ -11,14 +12,14 @@ function init_cnv(s) {
        var block = document.createElement('div');
        block.classList.add('block')
        block.addEventListener("mouseenter", function(block) {
-        block.target.style.backgroundColor = "purple";
+        block.target.style.backgroundColor = pen_color;
        }, false);
        ligne.appendChild(block);
     }
     cnv.appendChild(ligne);
   }
 }
-
+//Clear button
 const clear_button = document.querySelector('input#clear');
 clear_button.addEventListener("click", reset_cnv);
 
@@ -30,6 +31,15 @@ function reset_cnv(){
       block.style.backgroundColor = "white";
     }
   }
+}
+
+//Clear button
+
+const color_button = document.querySelector('input#color_picker');
+color_button.addEventListener("change", change_color);
+
+function change_color(event) {
+ pen_color= event.target.value;
 }
 
 //Main
