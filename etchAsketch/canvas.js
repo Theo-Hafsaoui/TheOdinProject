@@ -10,6 +10,9 @@ function init_cnv(s) {
     for (let _ = 0; _ < s; _++) {
        var block = document.createElement('div');
        block.classList.add('block')
+      block.addEventListener("mouseenter", function(block) {
+        block.target.style.backgroundColor = "purple";
+      }, false);
        ligne.appendChild(block);
     }
     cnv.appendChild(ligne);

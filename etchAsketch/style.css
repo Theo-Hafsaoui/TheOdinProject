@@ -3,6 +3,18 @@ body{
   color: white;
 }
 
+nav{
+  display: flex;
+  justify-content:center;
+  padding-bottom: 10px;
+}
+
+input{
+  background-color:#3C3836;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
 .title{
   color:#FBF1C7;
   display: flex;
