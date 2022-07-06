@@ -24,6 +24,7 @@ const clear_button = document.querySelector('input#clear');
 clear_button.addEventListener("click", reset_cnv);
 
 function reset_cnv(){
+
   for (let i = 0; i < cnv.childNodes.length; i++) {
     const ligne = cnv.childNodes[i];
     for (let j = 0; j < ligne.childNodes.length; j++) {
@@ -31,15 +32,28 @@ function reset_cnv(){
       block.style.backgroundColor = "white";
     }
   }
+
 }
 
-//Clear button
+//Color button
 
 const color_button = document.querySelector('input#color_picker');
 color_button.addEventListener("change", change_color);
 
 function change_color(event) {
  pen_color= event.target.value;
+}
+
+//Size button
+const size_button = document.querySelector('input#range_picker');
+size_button.addEventListener("change", update_cnv);
+
+function update_cnv(event) {
+   while (cnv.lastChild) {
+        cnv.removeChild(cnv.lastChild);
+    }
+    const size= event.target.value;
+    init_cnv(size);
 }
 
 //Main
