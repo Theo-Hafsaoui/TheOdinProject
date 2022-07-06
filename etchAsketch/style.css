@@ -11,6 +11,9 @@ nav{
 
 input{
   background-color:#3C3836;
+  padding: 10px;
+  border-radius: 100%;
+  color: white;
   margin-left: 2%;
   margin-right: 2%;
 }
