@@ -32,6 +32,7 @@ body{
   margin-top: 1.5em;
 }
 
+
 input{
   background-color: #FBF1C7;
   border-style: solid;
@@ -39,14 +40,48 @@ input{
   border-radius: 1em;
 }
 
+#division,
+#multiply,
+#add,
+#minus,
+#equal{
+ background-color: #fe8019;
+}
+
+#division:hover,
+#multiply:hover,
+#add:hover,
+#minus:hover,
+#equal:hover{
+ background-color: #d65d0e;
+}
+
+#division:active,
+#multiply:active,
+#add:active,
+#minus:active,
+#equal:active{
+ background-color: #fb4934;
+}
+
 input:hover{
   background-color: #ebdbb2;
 }
 
 input:active{
-  background-color: #fe8019;
+  background-color: #fb4934;
 }
 
+
+.result{
+  margin-left: 1em;
+}
+
+#last_result{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1em;
+}
 
 .numpad,
 #modulo,
@@ -56,6 +91,7 @@ input:active{
  padding: 2em;
  margin: .3em 1.5em .10em .7em;
 }
+
 
 #clear,
 #zero{
@@ -69,13 +105,14 @@ input:active{
 
 #screen{
   display: flex;
-  justify-content: center;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
   margin-top: 3em;
   margin-left: 1.5em;
   height: 10em;
   width: 26em;
   border: solid #504945;
   border-radius: 2em;
-  background-color: #d65d0e;
+  background-color: #a89984;
 }
 
