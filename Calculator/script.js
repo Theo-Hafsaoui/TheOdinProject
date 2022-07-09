@@ -1,5 +1,4 @@
 
-var list_result = new Array(3);
 const screen = {
   current : "",
   top1_screen: "",
@@ -16,7 +15,12 @@ function update_screen() {
   var bottom_screen = document.querySelector('div#current')
   var top1_screen = document.querySelector('div#top1')
   var top2_screen = document.querySelector('div#top2')
-  bottom_screen.textContent = screen.current;
+  if(screen.current.length>17){
+   bottom_screen.textContent = screen.current.slice(0,15)+"..";
+  }
+  else{
+    bottom_screen.textContent = screen.current;
+  }
   top1_screen.textContent = screen.top1_screen;
   top2_screen.textContent = screen.top2_screen;
 }
@@ -31,10 +35,19 @@ clear_button.addEventListener("click", function () {
   update_screen();
 },false);
 
+//numpad
+const num = document.querySelectorAll("input.numpad");
+console.log(num);
+for (let i = 0; i < num.length; i++) {
+  const button = num[i];
+  const nb = button.value;
+  button.addEventListener("click", function () {
+    screen.current+=nb
+    update_screen();
+  },nb);
+}
 
-screen.current = "c"
-screen.top1_screen = "t1"
-screen.top2_screen = "t2"
+//########main##########
 
 update_screen();
 
