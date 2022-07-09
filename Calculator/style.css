@@ -73,14 +73,18 @@ input:active{
 }
 
 
-.result{
+#top1,
+#top2{
   margin-left: 1em;
+  margin-bottom: 0.5em;
+  font-size:xx-large;
 }
 
-#last_result{
+#current{
   display: flex;
   justify-content: flex-end;
-  margin-right: 1em;
+  margin-right: 2em;
+  font-size:xx-large;
 }
 
 .numpad,
@@ -114,5 +118,6 @@ input:active{
   border: solid #504945;
   border-radius: 2em;
   background-color: #a89984;
+  font-family: 'Courier New', Courier, monospace;
 }
 
