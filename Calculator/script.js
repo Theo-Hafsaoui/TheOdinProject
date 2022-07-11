@@ -143,6 +143,17 @@ function evaluate(parse_arr) {
   }
  return res; 
 }
+//Equal button
+const equal_button = document.querySelector('input#equal');
+equal_button.addEventListener("click", function () {
+  pars_arr=parse(screen.current);
+  pars_arr=pre_evaluate(pars_arr);
+  const res = evaluate(pars_arr);
+  screen.top2_screen= screen.top1_screen;
+  screen.top1_screen= res;
+  screen.current = " \n";
+  update_screen();
+},false);
 
 
 
