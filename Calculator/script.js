@@ -1,4 +1,3 @@
-
 const screen = {
   current : "",
   top1_screen: "",
@@ -26,7 +25,6 @@ function update_screen() {
 }
 
 //Clear button
-
 const clear_button = document.querySelector('input#clear');
 clear_button.addEventListener("click", function () {
   screen.current = "";
@@ -47,7 +45,53 @@ for (let i = 0; i < num.length; i++) {
   },nb);
 }
 
+function parse(str) {
+  /**
+   * Return an array of array of a parse str
+   *
+   * ex:[["n",5],["op","+"],["n",5]]
+   */
+  arr = []
+  for (let i = 0; i < str.length; i++) {
+    var ch = str[i];
+    console.log(!Number.isNaN(Number(ch)));
+    console.log(arr);
+    if (!Number.isNaN(Number(ch))){
+        i++;
+        console.log(str[i]);
+        while (i<str.length && !Number.isNaN(Number(ch+str[i]))) {
+          console.log("ch=",ch)
+          ch+=str[i];
+          i++;
+        } 
+        i--;
+        arr.push(["n",Number(ch)])
+        continue;
+    }
+    switch (ch) {
+      case "+":
+        arr.push(["add","+"])
+        break;
+      case "-":
+        arr.push(["minus","-"])
+        break;
+      case "*":
+        arr.push(["mult","*"])
+        break;
+      case "/":
+        arr.push(["div","/"])
+        break;
+      case "%":
+        arr.push(["modulo","%"])
+        break;
+      default:
+        console.log("syntax error")
+        break;
+    }
+  }
+  return arr;
+}
 //########main##########
-
+console.log(parse(1+1))
 update_screen();
 
