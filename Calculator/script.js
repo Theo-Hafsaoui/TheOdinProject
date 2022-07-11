@@ -35,7 +35,6 @@ clear_button.addEventListener("click", function () {
 
 //numpad
 const num = document.querySelectorAll("input.numpad");
-console.log(num);
 for (let i = 0; i < num.length; i++) {
   const button = num[i];
   const nb = button.value;
@@ -54,13 +53,9 @@ function parse(str) {
   arr = []
   for (let i = 0; i < str.length; i++) {
     var ch = str[i];
-    console.log(!Number.isNaN(Number(ch)));
-    console.log(arr);
     if (!Number.isNaN(Number(ch))){
         i++;
-        console.log(str[i]);
         while (i<str.length && !Number.isNaN(Number(ch+str[i]))) {
-          console.log("ch=",ch)
           ch+=str[i];
           i++;
         } 
@@ -91,7 +86,70 @@ function parse(str) {
   }
   return arr;
 }
+
+function pre_evaluate(parse_arr) {
+  /**
+   * Take a parse arr from an str
+   * and return an array with the evaluation
+   * of the expresion of highest priority
+   */
+  for (let i = 0; i < parse_arr.length; i++) {
+    const type = parse_arr[i][0];
+    switch (type) {
+      case "mult":
+        parse_arr.splice(i-1, 3, ["n",parse_arr[i-1][1]*parse_arr[i+1][1]])
+        i++;
+        break;
+      case "div":
+        parse_arr.splice(i-1, 3, ["n",parse_arr[i-1][1]/parse_arr[i+1][1]])
+        i++;
+        break;
+      case "%":
+        parse_arr.splice(i-1, 3, ["n",parse_arr[i-1][1]%parse_arr[i+1][1]])
+        i++;
+        break;
+    }
+  }
+  return parse_arr;
+}
+
+
+function evaluate(parse_arr) {
+  /**
+   * Take a parse arr from an str
+   * and return the result of the expresion
+   */
+  res=0;
+  for (let i = 0; i < parse_arr.length; i++) {
+    const type = parse_arr[i][0];
+    switch (type) {
+      case "n":
+        if (res==0) {
+         res=parse_arr[i][1]; 
+        }
+        break;
+      case "add":
+        res+=parse_arr[i+1][1]
+        i++;
+        break;
+      case "minus":
+        res-=parse_arr[i+1][1]
+        i++;
+        break;
+      default:
+        console.log("syntax error")
+        break;
+    }
+  }
+ return res; 
+}
+
+
+
 //########main##########
-console.log(parse(1+1))
+pars_arr=parse("1+4*2-2")
+console.log(pars_arr);
+pars_arr=pre_evaluate(pars_arr)
+console.log(evaluate(pars_arr))
 update_screen();
 
