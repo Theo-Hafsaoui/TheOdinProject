@@ -1,0 +1,35 @@
+body{
+  background-color: #e5e9f0;
+  background-image: url(../data/francois-baranger-montagnes-p-56-57-no-text-def-6k.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: end;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+}
+
+.right{
+  width: clamp(45ch, 60%, 200ch);
+  height: 100vh;
+  background-color: #d8dee9;
+  display: flex;
+  justify-content:start;
+  flex-direction: column;
+}
+
+.up{
+  padding: 3vw;
+}
+
+.form{ 
+  padding: 3vw;
+  background-color: #eceff4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
