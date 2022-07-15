@@ -26,10 +26,42 @@ body{
 
 .form{ 
   padding: 3vw;
+  box-shadow: 3px 6px 5px rgba(0,0,0,0.2); 
   background-color: #eceff4;
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
-  justify-content: center;
+}
+
+#top_form{
+  padding-bottom: 1vh;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+#mid_form{
+  padding-bottom: 1vh;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+#bottom_form{
+  padding-bottom: 1vh;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.label_input{
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  border-style: solid;
+  border-radius: 0.5em;
 }
 
 
+.down{
+  padding: 3vw;
+}
