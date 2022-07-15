@@ -105,7 +105,7 @@ function pre_evaluate(parse_arr) {
         i++;
         break;
       case "%":
-        parse_arr.splice(i-1, 3, ["n",parse_arr[i-1][1]%parse_arr[i+1][1]])
+        parse_arr.splice(i-1, 3, ["n",(parse_arr[i-1][1]) % (parse_arr[i+1][1])])
         i++;
         break;
     }
@@ -151,16 +151,12 @@ equal_button.addEventListener("click", function () {
   const res = evaluate(pars_arr);
   screen.top2_screen= screen.top1_screen;
   screen.top1_screen= res;
-  screen.current = " \n";
+  screen.current = " ";
   update_screen();
 },false);
 
 
 
 //########main##########
-pars_arr=parse("1+4*2-2")
-console.log(pars_arr);
-pars_arr=pre_evaluate(pars_arr)
-console.log(evaluate(pars_arr))
 update_screen();
 
