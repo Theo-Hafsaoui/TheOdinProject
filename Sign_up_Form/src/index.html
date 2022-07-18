@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./style.css">
   <title>Sign-up Form</title>
-   <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
   <script src="password.js" defer></script>
 </head>
 <body>
+  <div class="up_left">
+    <h1>At the Mountains of Madness</h1> 
+    <img id="icon" src="../data/./Taln_Chapters.svg" alt="">
+  </div>
   <div class="right">
   <div class="up">
     <p>This is not a real online sercice ! You know you need something like this
@@ -49,14 +56,14 @@
         </div>
         <div class="label_input">
           <label for="confirm_password">Confirm Password:</label>
-          <input type="text" id="confirm_password">
+          <input type="text" required id="confirm_password">
         </div>
       </div>
     </form>
   </div>
 
   <div class="down">
-    <input type="button" name="create" value="Create Account">
+    <input id="submit" type="button" name="create" value="Create Account">
     <p>Aldready an Account ? <a href="https://duckduckgo.com"> Log in</a></p>
   </div>
   </div>
