@@ -1,3 +1,4 @@
+
 body{
   background-color: #e5e9f0;
   background-image: url(../data/francois-baranger-montagnes-p-56-57-no-text-def-6k.jpg);
@@ -5,11 +6,29 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
+  font-family: 'Ibarra Real Nova', serif;
   justify-content: end;
   margin:0!important;
   padding:0!important;
   border:0!important;
 }
+
+.up_left{
+  width: clamp(45ch, 60%, 200ch);
+  height: 16vh;
+  color: #d8dee9;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8em;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#icon{
+ height: clamp(1em,40%,9em);
+  filter: invert(48%) sepia(79%) saturate(0%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
 
 .right{
   width: clamp(45ch, 60%, 200ch);
@@ -20,8 +39,20 @@ body{
   flex-direction: column;
 }
 
+#submit{
+  color: #2e3440;
+  background-color: #a3be8c;
+  border-radius: 2rem;
+  padding: 5px;
+}
+
 .up{
+  font-weight: bold;
   padding: 3vw;
+}
+
+.form>p{
+  font-weight: bold;
 }
 
 .form{ 
