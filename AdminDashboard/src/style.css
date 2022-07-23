@@ -1,0 +1,29 @@
+body{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 4fr;
+}
+
+#navbar{
+  background-color: aliceblue;
+  grid-row: 1/-1;
+  grid-column: 1/2;
+}
+
+#top{
+  background-color: cyan;
+  grid-row: 1/2;
+  grid-column: 2/-1;
+}
+
+#botom-top{
+  background-color: pink;
+  grid-row: 2/3;
+  grid-column: 2/-1;
+}
+
+#main{
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
