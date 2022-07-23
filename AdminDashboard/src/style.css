@@ -4,10 +4,23 @@ body{
   grid-template-rows: 1fr 1fr 4fr;
 }
 
+li{
+  padding-bottom: 1em;
+}
+
+ul{
+  list-style-type: none;
+  padding-bottom: 3em;
+}
+
 #navbar{
+  padding-left: 0.5em;
+  padding-right: 2em;
   background-color: aliceblue;
   grid-row: 1/-1;
   grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
 }
 
 #top{
