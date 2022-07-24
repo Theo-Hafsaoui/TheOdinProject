@@ -1,7 +1,7 @@
 body{
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 1fr 4fr;
+  grid-template-rows: 1fr 3fr;
 }
 
 li{
@@ -23,11 +23,59 @@ ul{
   flex-direction: column;
 }
 
+#greetingsicons{
+  display: flex;
+  align-self: flex-start;
+}
+
+#control{
+  display: flex;
+  align-self: flex-start;
+}
+
+#control>input{
+  margin-top: 3vh;
+  margin-right: 2em;
+}
+
+#main_left{
+  background-color: beige;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+}
+
+.card{
+  border: solid black;
+  background-color: pink;
+}
+
+
 #top{
   background-color: cyan;
+  padding-top: 1em;
   grid-row: 1/2;
   grid-column: 2/-1;
+  grid-template-columns: 8fr repeat(3,1fr);
+  grid-template-rows: 1fr 1fr;
+  display: grid;
+  justify-content: space-evenly;
 }
+
+
+#search>input{
+  border-radius: 0.3em;
+  height: 3vh;
+}
+
+
+#search{
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  margin-top: 1vh;
+  margin-right: 3em;
+}
+
 
 #botom-top{
   background-color: pink;
@@ -35,8 +83,15 @@ ul{
   grid-column: 2/-1;
 }
 
+
 #main{
+  background-color: aquamarine;
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 4fr 1fr ;
 }
+
+#main_right{
+  background-color: pink;
+}
+
 
