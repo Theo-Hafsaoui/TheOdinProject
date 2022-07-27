@@ -1,18 +1,32 @@
 body{
   display: grid;
-  grid-template-rows:3em 1fr;
+  grid-template-rows: 10em 1fr;
   font-family: 'Roboto', sans-serif;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
   align-items: center;
   color:#586E75;
   background-color: #FDF6E3;
 }
 
+#top{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3em;
+  margin-left: 2em;
+  margin-right: 2em;
+	border-bottom: 1px solid #93A1A1;
+}
+
 #adder{
   width: 9em;
   border: none;
-  color: #002B36;
+  font-family: 'Roboto', sans-serif;
+  font-size: x-large;
+  color: #FDF6E3;
   border-radius: 1.5em;
-  padding: 1em;
+  padding: 0.5em;
   background-color: #268BD2;
 }
 
@@ -20,12 +34,12 @@ form{
   width: 15em;
   margin-left:-7.5em;
   position: absolute;
-  top:10%;
+  top:15%;
   left:50%;
   padding: 3vw;
   box-shadow: 3px 6px 5px rgba(0,0,0,0.2); 
   background-color: #eceff4;
-  display: flex;
+  display: none;
   justify-content: flex-start;
   flex-direction: column;
   z-index: 4;
@@ -33,4 +47,34 @@ form{
 
 input#Read{
   margin-bottom: 1em;
+}
+
+#board{
+  display: grid;
+  grid-row: 0/-1;
+  grid-column: 2/-1;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1em;
+  row-gap: 1em;
+}
+
+hr{
+	border: 0;
+	border-top: 1px solid red;
+}
+
+
+.card{
+  display: grid;
+  width: 10em;
+  padding: 0.5em;
+  border: solid #586E75;
+  border-radius: 1em;
+  background-color: #EEE8D5;
+  box-shadow: 0 0 3px 1px black;
+}
+
+.card_line{
+  display:inline;
+  margin-bottom: 0.3em;
 }
