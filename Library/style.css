@@ -10,6 +10,11 @@ body{
   background-color: #FDF6E3;
 }
 
+.boldText{
+  font-weight: bold;
+  display:inline;
+}
+
 #top{
   display: flex;
   justify-content: center;
@@ -54,8 +59,12 @@ input#Read{
   grid-row: 0/-1;
   grid-column: 2/-1;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 1em;
-  row-gap: 1em;
+  grid-column-gap: 20px;
+  grid-row-gap: 5vh;
+  justify-items: center;
+  align-items: center;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 hr{
@@ -65,6 +74,7 @@ hr{
 
 
 .card{
+  align-items: center;
   display: grid;
   width: 10em;
   padding: 0.5em;
@@ -74,7 +84,8 @@ hr{
   box-shadow: 0 0 3px 1px black;
 }
 
-.card_line{
+.card_line,
+p{
   display:inline;
   margin-bottom: 0.3em;
 }
