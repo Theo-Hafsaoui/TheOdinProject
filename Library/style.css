@@ -1,5 +1,36 @@
 body{
+  display: grid;
+  grid-template-rows:3em 1fr;
   font-family: 'Roboto', sans-serif;
+  align-items: center;
   color:#586E75;
   background-color: #FDF6E3;
+}
+
+#adder{
+  width: 9em;
+  border: none;
+  color: #002B36;
+  border-radius: 1.5em;
+  padding: 1em;
+  background-color: #268BD2;
+}
+
+form{ 
+  width: 15em;
+  margin-left:-7.5em;
+  position: absolute;
+  top:10%;
+  left:50%;
+  padding: 3vw;
+  box-shadow: 3px 6px 5px rgba(0,0,0,0.2); 
+  background-color: #eceff4;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  z-index: 4;
+}
+
+input#Read{
+  margin-bottom: 1em;
 }

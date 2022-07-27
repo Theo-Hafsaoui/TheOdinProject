@@ -11,6 +11,23 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <input type="button" name="Add" value="Add Book">
+  <input  id="adder" type="button" name="Add"  onclick="openForm" value="Add Book">
+  <div id="add">
+   <form>
+   <h1>Add a book</h1> 
+      <label for="firstName">Title:</label>
+      <input type="text" id="BookName" required>
+      <label for="firstName">Author Name:</label>
+      <input type="text" id="BookName" required>
+      <label for="firstName">Number of page:</label>
+      <input type="text" id="BookName" required>
+      <label for="firstName">Read:</label>
+      <input type="text" id="Read" required>
+      <button type="submit" class="btn">Add</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+   </form>
+  </div>
+
+
 </body>
 </html>
