@@ -5,27 +5,28 @@ author = document.getElementById("Author");
 title = document.getElementById("Title");
 page = document.getElementById("Page") ;
 
-const arr_att = ["Title:","Author name: ","Number of page: ","Read: "];
+function Book(title,author,number,read) {
+  this.title = title;
+  this.author = author;
+  this.number = number;
+  this.read = read;
+}
+
+let myLibrary = [];
+
+const arr_att = ["Title: ","Author name: ","Number of page: ","Read: "];
+const arr_clss = ["title","author","number","read"];
 
 Form.addEventListener('submit', () => {
   console.log(page.value);
   console.log(title.value);
   console.log(author.value);
   console.log(read.value);
+  const book = new Book(title.value, author.value, page.value, read.value);
+  add_cart(book);
 });
 
-function old_add_cart() {
-  var board = document.querySelector('div#board');
-  var card = document.createElement('div');
-  card.classList.add("card");
-  var title = document.createElement('div');
-  title.textContent = "Title"
-  title.classList.add("boldText")
-  card.appendChild(title); 
-  board.appendChild(card); 
-}
-
-function add_cart() {
+function add_cart(book) {
   const board = document.querySelector('div#board');
   var card = document.createElement('div');
   card.classList.add("card");
@@ -38,15 +39,11 @@ function add_cart() {
     boldText.textContent = att;
     ligne.appendChild(boldText); 
     var Text = document.createElement('p');
-    Text.textContent = "test";
+    Text.textContent = book[arr_clss[i]]
     ligne.appendChild(Text); 
     card.appendChild(ligne); 
   }
   board.appendChild(card); 
-}
-
-function hello() {
- console.log("hello") 
 }
 
 function openForm() {
@@ -57,32 +54,4 @@ function closeForm() {
   Form.style.display = "none";
 } 
 
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
-add_cart();
+
