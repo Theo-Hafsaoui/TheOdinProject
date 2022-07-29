@@ -12,11 +12,12 @@ function closeForm() {
 } 
 
 
-function Book(title,author,number,read) {
+function Book(id,title,author,number,read) {
   this.title = title;
   this.author = author;
   this.number = number;
   this.read = read;
+  this.id = id;
 }
 
 let Library = [];
@@ -30,11 +31,20 @@ function update_from_form() {
   new_book.title = document.getElementById("Author").value;
   new_book.author = document.getElementById("Title").value;
   new_book.read = document.getElementById("Page").value ;
+  new_book.id = Library.length;
   Library.push(new_book)
   add_card(new_book);
   console.log(Library)
   clear_form();
   closeForm();
+}
+
+function update_from_library(library) {
+ clear_board(); 
+ for (let i = 0; i < library.length; i++) {
+   const book = library[i];  
+   add_card(book);
+ } 
 }
 
 function clear_form() {
@@ -44,9 +54,21 @@ function clear_form() {
   document.getElementById("Page").value  = "";
 }
 
+function clear_board() {
+  const body = document.querySelector('body');
+  const board = document.querySelector('div#board');
+  console.log(board);
+  if (board == undefined) {
+   return -1;
+  }
+  body.removeChild(board);
+  const new_board = document.createElement('div');
+  new_board.setAttribute('id', 'board')
+  body.appendChild(new_board); 
+}
+
 
 function add_card(new_book) {
-  Library.push(new_book)
   const arr_att = ["Title: ","Author name: ","Number of page: ","Read: "];
   const arr_clss = ["title","author","number","read"]; console.log(Library)
   const board = document.querySelector('div#board');
@@ -70,5 +92,9 @@ function add_card(new_book) {
 }
 
 //Test
-const b = new Book("Titre", "Author", "123", "NO");
-add_card(b);
+const b = new Book(0,"Titre", "Author", "123", "NO");
+const c = new Book(1,"Titre2", "Author", "124", "NO");
+Library.push(b);
+Library.push(c);
+//update_from_library(Library);
+//add_card(b);
