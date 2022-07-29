@@ -35,7 +35,7 @@ body{
   background-color: #268BD2;
 }
 
-form{ 
+#PopUpForm{ 
   width: 15em;
   margin-left:-7.5em;
   position: absolute;
@@ -76,7 +76,7 @@ hr{
 .card{
   align-items: center;
   display: grid;
-  width: 10em;
+  width: 15em;
   padding: 0.5em;
   border: solid #586E75;
   border-radius: 1em;

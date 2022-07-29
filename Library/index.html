@@ -11,12 +11,16 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+
+  <!-- Top Button -->
   <div id="top">
   <input  id="adder" type="button" name="Add"  onclick="openForm()" value="Add Book">
   </div>
   <hr>
   <div id="add">
-   <form id="PopUpForm">
+
+    <!-- Form -->
+   <section id="PopUpForm">
    <h1>Add a book</h1> 
       <label for="firstName">Title:</label>
       <input type="text" id="Title" required>
@@ -27,41 +31,31 @@
       <label for="firstName">Read:</label>
       <input type="text" id="Read" required>
       <div>
-        <button type="submit" class="btn" onclick="">Add</button>
+        <button class="submit" type="submit" onclick="update_from_form()"> Add</button>
         <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
       </div>
-   </form>
+   </section>
   </div>
   <div id="board">
 
 
+    <!-- Card Exmample -->
    <div class="card">
-     <div class="card_line"> <b>Title:</b> Test </div>
-     <div class="card_line"><b>Author name:</b> Test </div>
-     <div class="card_line"><b>Number of page:</b> Test </div>
-     <div class="card_line"><b>Read:</b> Test </div>
-   </div> 
-
-   <div class="card">
-     <div class="card_line"> <b>Title:</b> Test </div>
-     <div class="card_line"><b>Author name:</b> Test </div>
-     <div class="card_line"><b>Number of page:</b> Test </div>
-     <div class="card_line"><b>Read:</b> Test </div>
-   </div> 
-   <div class="card">
-     <div class="card_line"> <b>Title:</b> Test </div>
-     <div class="card_line"><b>Author name:</b> Test </div>
-     <div class="card_line"><b>Number of page:</b> Test </div>
-     <div class="card_line"><b>Read:</b> Test </div>
+     <div class="card_line"> <b>Title:</b>  Le Test </div>
+     <div class="card_line"><b>Author name:</b> Test de testville </div>
+     <div class="card_line"><b>Number of page:</b> 42 </div>
+     <div class="card_line"><b>Read:</b> No </div>
    </div> 
 
 
    <div class="card">
-     <div class="card_line"> <b>Title:</b> Test </div>
-     <div class="card_line"><b>Author name:</b> Test </div>
-     <div class="card_line"><b>Number of page:</b> Test </div>
-     <div class="card_line"><b>Read:</b> Test </div>
+     <div class="card_line"> <b>Title:</b>  Le Test II </div>
+     <div class="card_line"><b>Author name:</b> Test de testville </div>
+     <div class="card_line"><b>Number of page:</b> 42 </div>
+     <div class="card_line"><b>Read:</b> No </div>
    </div> 
+
+
 
   </div>
 
