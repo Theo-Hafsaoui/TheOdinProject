@@ -103,3 +103,12 @@ p{
   background-color: var(--card-bg-color);
   border: none;
 }
+
+.delete_button>button:hover{
+  color:#DC322F;
+}
+
+.delete_button>button:active{
+  color:red;
+}
+

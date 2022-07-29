@@ -8,7 +8,6 @@ function openForm() {
 
 function closeForm() {
   Form.style.display = "none";
-  console.log("Inside closeForm")
 } 
 
 
@@ -34,7 +33,6 @@ function update_from_form() {
   new_book.id = Library.length;
   Library.push(new_book)
   add_card(new_book);
-  console.log(Library)
   clear_form();
   closeForm();
 }
@@ -57,7 +55,6 @@ function clear_form() {
 function clear_board() {
   const body = document.querySelector('body');
   const board = document.querySelector('div#board');
-  console.log(board);
   if (board == undefined) {
    return -1;
   }
@@ -68,9 +65,10 @@ function clear_board() {
 }
 
 
+
 function add_card(new_book) {
   const arr_att = ["Title: ","Author name: ","Number of page: ","Read: "];
-  const arr_clss = ["title","author","number","read"]; console.log(Library)
+  const arr_clss = ["title","author","number","read"]; 
   const board = document.querySelector('div#board');
   var card = document.createElement('div');
   card.classList.add("card");
@@ -87,14 +85,40 @@ function add_card(new_book) {
     Text.textContent = new_book[arr_clss[i]]
     ligne.appendChild(Text); 
     card.appendChild(ligne); 
+ 
+    card.setAttribute('id', new_book.id)
   }
+  var del = document.createElement('div');
+  del.classList.add("delete_button");
+  var button = document.createElement('button');
+  button.type="button"
+  button.setAttribute("onclick", "delete_button(this)")
+  button.textContent="X"
+  del.appendChild(button); 
+  card.appendChild(del);
   board.appendChild(card); 
+}
+
+function delete_button(btn) {
+  //TODO
+ const changing_card= btn.parentNode.parentNode.id;
+ console.log(changing_card);
+ for (let i = changing_card; i < Library.length; i++) {
+   Library[i].id--;
+ }
+ Library.splice(changing_card,1);
+ console.log(Library);
+ update_from_library(Library);
 }
 
 //Test
 const b = new Book(0,"Titre", "Author", "123", "NO");
 const c = new Book(1,"Titre2", "Author", "124", "NO");
+ console.log(Library);
 Library.push(b);
+ console.log(Library);
 Library.push(c);
+ console.log(Library);
 //update_from_library(Library);
-//add_card(b);
+add_card(b);
+add_card(c);
