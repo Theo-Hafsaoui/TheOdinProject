@@ -92,23 +92,37 @@ p{
   margin-bottom: 0.3em;
 }
 
-.delete_button{
-  display: flex;
+.card_button{
+  display: grid;
+  grid-template-columns:1fr 1fr;
   align-items: center;
-  justify-content: flex-end;
 }
 
-.delete_button>button{
+.card_button>button{
   color:#586F99;
   background-color: var(--card-bg-color);
   border: none;
 }
 
-.delete_button>button:hover{
+.card_button>button:hover{
   color:#DC322F;
 }
 
-.delete_button>button:active{
+.card_button>button:active{
   color:red;
 }
+
+#read_button{
+  color:#586F99;
+}
+
+#read_button:hover{
+  color:#859900;
+}
+
+#read_button:active{
+  color:green;
+}
+
+
 

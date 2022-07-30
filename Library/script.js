@@ -21,15 +21,15 @@ function Book(id,title,author,number,read) {
 
 let Library = [];
 
-var new_book = new Book("","","","");
 
 Form.addEventListener('submit', update_from_form);
 
 function update_from_form() {
-  new_book.number = document.getElementById("Read").value ;
-  new_book.title = document.getElementById("Author").value;
-  new_book.author = document.getElementById("Title").value;
-  new_book.read = document.getElementById("Page").value ;
+  const new_book = new Book("","","","");
+  new_book.read = document.getElementById("isread").value ;
+  new_book.author = document.getElementById("Author").value;
+  new_book.title = document.getElementById("Title").value;
+  new_book.number = document.getElementById("Page").value ;
   new_book.id = Library.length;
   Library.push(new_book)
   add_card(new_book);
@@ -46,7 +46,6 @@ function update_from_library(library) {
 }
 
 function clear_form() {
-  document.getElementById("Read").value = "" ;
   document.getElementById("Author").value = "";
   document.getElementById("Title").value = "";
   document.getElementById("Page").value  = "";
@@ -89,36 +88,50 @@ function add_card(new_book) {
     card.setAttribute('id', new_book.id)
   }
   var del = document.createElement('div');
-  del.classList.add("delete_button");
-  var button = document.createElement('button');
-  button.type="button"
-  button.setAttribute("onclick", "delete_button(this)")
-  button.textContent="X"
-  del.appendChild(button); 
+  del.classList.add("card_button");
+  const del_button = document.createElement('button');
+  del_button.type="button"
+  del_button.setAttribute("onclick", "delete_button(this)")
+  del_button.textContent="X"
+  const r_button = document.createElement('button');
+  r_button.type="button"
+  r_button.setAttribute("onclick", "read_button(this)")
+  r_button.setAttribute("id", "read_button")
+  r_button.textContent="Read ?"
+  del.appendChild(r_button); 
+  del.appendChild(del_button); 
   card.appendChild(del);
   board.appendChild(card); 
 }
 
 function delete_button(btn) {
-  //TODO
  const changing_card= btn.parentNode.parentNode.id;
- console.log(changing_card);
  for (let i = changing_card; i < Library.length; i++) {
-   Library[i].id--;
+   Library[i].id-=1;
  }
  Library.splice(changing_card,1);
- console.log(Library);
+ update_from_library(Library);
+}
+
+function read_button(btn) {
+ const changing_card= btn.parentNode.parentNode.id;
+ switch (Library[changing_card].read) {
+   case "yes":
+     Library[changing_card].read="no"
+     break;
+   default:
+     Library[changing_card].read="yes"
+     break;
+ }
  update_from_library(Library);
 }
 
 //Test
-const b = new Book(0,"Titre", "Author", "123", "NO");
-const c = new Book(1,"Titre2", "Author", "124", "NO");
- console.log(Library);
-Library.push(b);
- console.log(Library);
-Library.push(c);
- console.log(Library);
-//update_from_library(Library);
-add_card(b);
-add_card(c);
+//console.log(Library);
+//Library.push(b);
+//console.log(Library);
+//Library.push(c);
+//console.log(Library);
+////update_from_library(Library);
+//add_card(b);
+//add_card(c);

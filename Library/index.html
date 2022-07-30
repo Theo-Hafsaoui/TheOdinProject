@@ -29,8 +29,18 @@
       <input type="text" id="Author" required>
       <label for="firstName">Number of page:</label>
       <input type="text" id="Page" required>
-      <label for="firstName">Read:</label>
-      <input type="text" id="Read" required>
+      <div style="display: flex;">
+    Read: 
+    <div>
+      <input type="radio" id="isread" name="isread" value="yes"
+             checked>
+      <label for="yes">Yes</label>
+    </div>
+    <div>
+      <input type="radio" id="isnotread" name="isread" value="no">
+      <label for="no">No</label>
+    </div>
+      </div>
       <div>
         <button class="submit" type="submit" onclick="update_from_form()"> Add</button>
         <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
@@ -38,6 +48,7 @@
    </section>
   </div>
   <div id="board">
+
 
 
 
