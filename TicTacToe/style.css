@@ -1,0 +1,38 @@
+body{
+  --bg-color: #282828;
+  --text-color: #fbf1c7;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+#board{
+  display: grid;
+  grid-template-columns: 2fr repeat(3,1fr) 2fr;
+}
+
+
+.row1,
+.row2,
+.row3{
+  display: flex;
+}
+
+.row1{
+  color: red;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.row2{
+  color: pink;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.row3{
+  color: blue;
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+
