@@ -43,7 +43,7 @@ feel free to take a look, the image are a link to the webpages
    ### Etch a sketch
    ...
   
-  [<img alt="RockAndRoll" width="50%" src="./.github/thumbnail/EtchASketch.png" />](https://theo-hafsaoui.github.io/TheOdinProject/EtchASketch/src)
+  [<img alt="RockAndRoll" width="50%" src="./.github/thumbnail/EtchASketch.png" />](https://theo-hafsaoui.github.io/TheOdinProject/etchAsketch/)
        
    --------
    
